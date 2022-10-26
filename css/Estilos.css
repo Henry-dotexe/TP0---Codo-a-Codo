@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #343131;
+    color: #000;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+.header{ /*Contiene al logo, el nav y el buscador*/
+    background-color: #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px 10vw;
+    width: 100vw;
+}
+
+/*Comienzo logo*/
+.header .logo{
+    cursor: pointer;
+    order: 1;
+}
+
+.header .logo img{
+    height: 40px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+/*Fin logo*/
+/*Comienzo nav*/
+.header nav{
+    list-style: none;
+    order: 3;
+}
+
+.header .nav-btns li{
+    display: inline-block;
+    padding: 5px 20px;
+    transition: all 0.2s;
+}
+
+.header .nav-btns li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-btns a{
+    font-size: 700;
+    color: white;
+    text-decoration: none; /* Quita el subrayado del link*/
+}
+
+.header .nav-btns li a:hover{
+    color: #99ffd3;
+}
+
+.header .nav-btns .btn-menu{
+    color: white;
+    font-size: 700;
+    display: none;/* Oculto el texto menu*/
+    margin-bottom: 10px;
+}
+.header .nav-btns .btn-menu div{
+    background-color: #212121;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    padding: 5px 15px;
+    display: none;
+    transition: all 1.5s ease;
+}
+
+.btn-menu div p{
+    padding: 5px 10px;
+}
+
+/*fin nav*/
+/*Comienzo buscador*/
+.header .buscador{
+    order: 2;
+}
+
+.header .buscador .btn{
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #212121;
+    color: white;
+    border-radius: 50%;
+    display:none;
+}
+
+.buscador input{
+    width: 25vw;
+    min-width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 2vw;
+    border:1px solid silver;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.buscador input:hover{
+    transform: scale(1.15);
+}
+
+.buscador input:focus{
+    transform: scale(1.15);
+}
+/*Fin buscador*/
+
+.footer{
+    height: auto;
+    width: 100vw;
+    background-color: #212121;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    color: white;
+}
+
+.footer .info img{
+    height: 60px;
+}
+
+.footer .info div{
+    display: inline-block;
+    padding: 1vh;
+}
+
+.Categoria {
+    width: 100vw;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    
+}
+
+.Contenedor {
+    width: 100vw;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 3fr;
+}
+
+.Contenedor .card,
+    .Contenedor .barra_filtros {
+    background: #f5f5ff;
+    /*box-shadow: #f6f6fa 0px 0px 28px 28px inset, rgba(0, 0, 0, 0.22) 0px 10px 10px;*/
+    padding: 0px;
+    border-radius: 20px;
+}
+.barra_filtros li{
+    list-style: none;
+}
+.Categoria .info_cat_1 {
+    height: 200px;
+    padding: 10px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Contenedor .barra_filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.Contenedor .Productos {
+    cursor: pointer;
+    display: grid;
+    gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 30px 1px #8a8888, #c7cfd6 0px 0px 90px 25px inset;
+    background-size:auto;
+}
+
+.Productos .card {
+    border-radius: 10px;
+	min-height: 300px;
+    text-align: center;
+    background-size:auto;
+	background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+
+/* Inicio formulario */
+.wrap{
+    margin: 0 10px;
+    display: grid;
+    width: 100vw;
+    gap: 10px;
+    grid-template-areas: 
+    'infotienda infotienda'
+    'form1 form2';
+}
+.infotienda{
+    background-color: #f6f6fa;
+    border-radius: 10px;
+    margin: 5vh 1vw;
+    grid-area: infotienda;
+    display: flex;
+    flex-direction: row;
+}
+.wrap .infotienda #img_amigos{
+    height: fit-content;
+}
+.wrap .infotienda img{margin: 1% 1%; border-radius: 5px;}
+.wrap .infotienda .info{
+    margin: 1%;
+    padding: 0 10px;
+    min-width: 350px;
+}
+
+.wrap #contacto{grid-area: form1; width: 50vw;}
+
+.wrap #comentarios{grid-area: form2; width: 50vw;}
+
+.form-title{
+    text-align: center;
+    text-decoration: underline wavy;
+}
+
+.form .row{
+    display: flex;
+    margin: 15px auto;
+    justify-content: space-evenly;
+
+}
+.form .row .col{
+    display:inline-block;
+    justify-content: center;
+    /* margin: 0 10px; */
+}
+
+.form-wrap fieldset{
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding: 5%;
+    background-color: #f6f6fa;
+}
+
+.form-wrap .form fieldset label{
+    font-size: 15px;
+}
+.form-wrap .form fieldset input{
+    border-radius: 5px;
+    border: 1px solid silver;
+    outline: none;
+    font-size: 75%;
+    height: 25px;
+}
+.form-wrap .form textarea{
+    width: 90%;
+    margin-left: 5%;
+}
+
+#error{
+    color: red;
+    font-size: 15px;
+}
+#validacion{color: green; font-size: 15px;}
+/* Fin formulario */
+
+/* #212121 negro
+#99ffd3 aqua*/
+
+.info_cat_1 .texto_cat {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.texto_card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.texto_barra {
+    display: flex;
+    margin-left: 85px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width:1000){
+    .wrap{
+        grid-template-areas: 
+        'infotienda'
+        'form1'
+        'form2';
+    }
+    
+    .infotienda {
+        display: flex;
+        flex-direction: column;
+    }
+    .infotienda div{
+        display:block;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    /* Header-footer */
+    .header ul{
+        position: relative;
+        top: 5px;
+    }
+    .header .nav-btns .btn-menu{display: block;cursor: pointer;}
+    .header .nav-btns .btn-menu:hover div{display: block;}
+    .header .nav-btns .btn-link{display: none;}
+    .header .buscador input{
+        width: 40vw;
+        transition: all 0.2s ease;
+    }
+    .footer{
+        height:auto;
+        justify-content: block;
+    }
+    .footer .info div{
+        display: inline-block;
+        align-items:center
+    }
+    /* Header-footer */
+    /* Categorias */
+    .Contenedor {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 100%;
+    }
+    /* Categorias */
+}
+   
+@media screen and (max-width:600px) {
+
+    .buscador input{
+        margin: 0 15px;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+    .footer div{
+        margin: 5px 0;
+
+    }
+    .footer .info div{
+        display: block;
+        margin: 0px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .Contenedor,
+    .Contenedor .Productos {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+     } 
+    /* Header-footer */
+     .header .buscador{
+        position: absolute;
+        margin-left: 50px;
+    }
+    .header .buscador .btn{
+        display: inline;
+        position: absolute;
+    }
+    .header .buscador input{
+        width: 0px;
+        height: 0px;
+        border: 0px;
+        min-width: auto;
+        transition: all 0.6s ease-in;
+    }
+
+    .header .buscador .btn:hover ~ input{
+        width: 40vw;
+        height: auto;
+    }
+    .header .buscador .btn ~ input:hover{
+        width: 40vw;
+        height: auto;
+    }
+    .header .buscador .btn ~ input:focus{
+        width: 40vw;
+        height: auto;
+    }
+    /* Header-footer */
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Estilos.css">
+    <script src="https://kit.fontawesome.com/5888d4f748.js" crossorigin="anonymous"></script>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <a href="main.html"><img src="img/logohah.png" alt="logo"></a>
+
+        </div>
+
+        <div class="buscador">
+            <div class="btn">
+                <i id="lupita" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" placeholder="Buscar" required>
+        </div>
+
+        <nav>
+            <ul class="nav-btns">
+                <li class="btn-menu">
+                    <i class="fa-solid fa-bars"></i> Menú
+                    <div>
+                        <p><a href="Categoria_1.html">Auriculares</a></p>
+                        <p><a href="Categoria_2.html">Speakers</a></p>
+                        <p><a href="formulario.html">Contacto</a></p>
+                    </div>
+                </li>
+                <li class="btn-link">
+                    <a href="Categoria_1.html">Auriculares</a>
+                </li>
+                <li class="btn-link">
+                    <a href="Categoria_2.html">Speakers</a>
+                </li>
+                <li class="btn-link">
+                    <a href="formulario.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="wrap">
+            <div class="infotienda">
+                <div id="img_amigos">
+                    <img src="img/amigos.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3 style="text-align:center">¿Quienes somos?</h3>
+                    <p>HAH Store es una empresa creciente formada por tres amigos programadores que recientemente se aventuran en el campo del E-Commerce, gracias a una idea que salió un día charlando. <br><br>
+                    Primero tuvieron diversas ideas, desde una tienda de globos hasta una cafetería con gatos, pero la idea que se concretó es la que se puede observar: Una tienda de artículos de audio. <br><br>
+                    En absoluto la idea era presentar esta tienda a una evaluación de un curso de programación, pero ya que estabamos queríamos algún feedback de nuestro trabajo. Se aceptan recomendaciones para mejorar en la caja de comentarios a continuación. <br></p>
+                     <p style="text-align:center"> <b>¡Gracias por visitar! </b> </p>
+                </div>
+                
+            </div>
+            <div class="form-wrap" id="contacto">
+                <form action="" class="form" id="formulario">
+                    <fieldset>
+                        <p class="form-title">Formulario de contacto</p>
+                        <div class="row">
+                            <div class="col">
+                                <label for="nombre">Nombre </label> <br>
+                            <input type="text" id="nombre" name="nombre" size="30" placeholder="Nombre">
+                            </div>
+                            <div class="col">
+                                <label for="apellido">Apellido </label> <br>
+                            <input type="text" id="apellido" name="apellido" size="30"
+                                placeholder="Apellido">
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="email">Correo: </label>
+                                <input type="email" size="40" id="email" placeholder="p. ej. pepe@gmail.com">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="cv">Adjuntar CV: </label>
+                                <input type="file" id="cv">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p><input type="checkbox" id="term_cond"> Acepto los términos y condiciones</p>
+                            </div>                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p id="error"></p>
+                                <input type="submit" id="envioform" value="Enviar datos">
+                                <p id="validacion"></p>
+                            </div>
+                            
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="form-wrap" id="comentarios">
+                <form action="" class="form" >
+                    <fieldset>
+                        <p class="form-title">¡Dejanos un comentario!</p><br>
+                        <div class="row">
+                            <textarea class="comm-box" placeholder="Escriba su comentario..."></textarea>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Enviar comentarios" id="enviocomm">
+                        </div>
+                        
+                    </fieldset>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="info">
+            <div class="logo">
+                <a href="main.html"><img src="img/logohah.png" alt="logo"></a>
+            </div>
+
+            <div class="redes">
+                <h3>HAH Store</h3>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+
+        <div class="info1">
+            <h4>Copyright © 2022-2022</h4>
+            <h5>All rights reserved</h5>
+        </div>
+
+        <div class="paymethods">
+            <h3>Métodos de pago</h3>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-paypal"></i>
+            <i class="fa-regular fa-money-bill-1"></i>
+        </div>
+    </footer>
+    <script src="js/form_check.js"></script>
+</body>
+
+</html>
