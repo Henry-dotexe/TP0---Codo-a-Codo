@@ -143,6 +143,82 @@ h4 {
 }
 /*Fin buscador*/
 
+.grid-container>* {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* inicio declaracion de areas de grid */
+  
+  .slider {
+    grid-area: navbar;
+  }
+  
+  .category1 {
+    grid-area: category1;
+    background-image: url(/img/headphon1.jpg);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /* min-height: 300px; */
+    text-align: center;
+    /* background-size:auto; */
+    background-position: center center;
+    background-size: 100%;
+  }
+  
+  .category2 {
+    grid-area: category2;
+    background-image: url(/img/speakers-1.jpg);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /* min-height: 300px; */
+    text-align: center;
+    /* background-size:auto; */
+    background-position: center center;
+    background-size: 100%;
+  }
+  
+  .main {
+    grid-area: main;
+    background-image: url(/img/main.jpg);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /* min-height: 300px; */
+    text-align: center;
+    /* background-size:auto; */
+    background-position: center center;
+    background-size: 100%;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-image: url(/img/sale.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* fin declaracion de areas de grid */
+  
+  /* inicio declaracion de estructura de grid para mobil */
+  
+  .grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template:
+      "navbar" auto
+      "category1" 100px
+      "category2" 100px
+      "main" 100px
+      "sidebar" 100px;
+  }
+  
+  /* fin declaracion de estructura de grid para mobil */
+  
+
+/* Comienzo footer */
 .footer{
     height: auto;
     width: 100vw;
@@ -163,13 +239,12 @@ h4 {
     display: inline-block;
     padding: 1vh;
 }
-
+/* Fin del footer */
 .Categoria {
     width: 100vw;
     margin: 20px auto;
     display: grid;
     gap: 20px;
-    
 }
 
 .Contenedor {
@@ -305,8 +380,42 @@ h4 {
 #validacion{color: green; font-size: 15px;}
 /* Fin formulario */
 
-/* #212121 negro
-#99ffd3 aqua*/
+/* inicio de slider */
+.slider {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+  }
+  
+  .slider .slide {
+    width: auto;
+  }
+  
+  .slider .slide img {
+    width: 100%;
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  
+    100% {
+      -webkit-transform: translateX(calc(-200px * 7));
+      transform: translateX(calc(-200px * 7));
+    }
+  }
+  
+  /* fin de slider */
 
 .info_cat_1 .texto_cat {
     height: 100%;
@@ -349,6 +458,44 @@ h4 {
     }
 
 }
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+      grid-template:
+        "navbar navbar navbar navbar" 100px
+        "category1 category1 category2 category2" 300px
+        /* altura de las filas */
+        "main main main sidebar" 300px /
+        /* altura de las filas */
+        auto auto auto auto;
+      /* anchura de las columnas */
+    }
+  
+    .slider {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      overflow: hidden;
+    }
+  
+    .slider .slide-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+      -webkit-animation: scroll 40s linear infinite;
+      width: calc(200px * 14);
+    }
+  
+    .slider .slide {
+      width: 200px;
+    }
+  
+    .slider .slide img {
+      width: 100%;
+  
+    }
+  }
+  
+
 @media screen and (max-width: 850px) {
     /* Header-footer */
     .header ul{
@@ -379,7 +526,38 @@ h4 {
     }
     /* Categorias */
 }
-   
+
+@media screen and (min-width: 600px) {
+    .grid-container {
+      grid-template:
+        "navbar navbar navbar navbar" 100px
+        "category1 category1 category2 category2" 250px
+        /* altura de las filas */
+        "main main main sidebar" 280px /
+        /* altura de las filas */
+        auto auto auto auto;
+      /* anchura de las columnas */
+    }
+  
+    .category1 {
+      grid-area: category1;
+      background-image: url(/img/headphon1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-size: 100%; */
+      background-position: center center;
+    }
+  
+    .category2 {
+      grid-area: category2;
+      background-image: url(/img/speakers-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background-size: 100%; */
+      background-position: center center;
+    }
+  }
+
 @media screen and (max-width:600px) {
 
     .buscador input{
@@ -438,4 +616,5 @@ h4 {
     }
     /* Header-footer */
 }
+
 
